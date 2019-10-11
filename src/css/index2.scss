@@ -1,0 +1,59 @@
+//混合器
+@mixin rounded-corners {
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+
+
+.mycss01 {
+  background-color: #ccc;
+  color: #000;
+  @include rounded-corners;
+}
+
+.mycss02 {
+  @include rounded-corners;
+  border: 2px solid #00aa00;
+}
+
+
+@mixin no-bullets {
+  list-style: none;
+  li {
+    list-style-image: none;
+    list-style-type: none;
+    margin-left: 0px;
+  }
+}
+
+ul.plain {
+  color: #ccc;
+  @include no-bullets;
+}
+
+
+@mixin link-colors( $normal,$hover,$visited) {
+  color: $normal;
+  &:hover {
+    color: $hover;
+  }
+  &:visited {
+    color: $visited;
+  }
+}
+
+/*a {
+  @include link-colors(red,green,blue);
+}*/
+a {
+  @include link-colors($normal:red,$hover:green,$visited:blue);
+}
+
+
+
+
+
+
+
+

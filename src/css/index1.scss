@@ -1,0 +1,55 @@
+//子组合选择器和同层组合选择器： > + ~
+article {
+  ~ article {
+    border: 1px solid #ccc;
+  }
+
+  > section {
+    background: #eee;
+  }
+
+  dl > {
+    dt {
+      color: #333;
+    }
+
+    dd {
+      color: #555;
+    }
+  }
+
+  nav + & {
+    margin-top: 5px;
+  }
+}
+
+
+//嵌套属性
+.navvv {
+  border: {
+    style: solid;
+    width: 1px;
+    color: #ccc;
+  }
+}
+
+
+.navv {
+  border: 1px solid #ccc {
+    left: 0px;
+    right: 0px;
+  }
+  background-color: #ccc;
+
+}
+
+
+@mixin rounded-corners {
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+
+
+
+

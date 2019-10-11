@@ -1,0 +1,30 @@
+.mycss01 {
+  background-color: #ccc;
+  color: #000;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px; }
+
+.mycss02 {
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  border: 2px solid #00aa00; }
+
+ul.plain {
+  color: #ccc;
+  list-style: none; }
+  ul.plain li {
+    list-style-image: none;
+    list-style-type: none;
+    margin-left: 0px; }
+
+/*a {
+  @include link-colors(red,green,blue);
+}*/
+a {
+  color: red; }
+  a:hover {
+    color: green; }
+  a:visited {
+    color: blue; }

@@ -1,0 +1,7 @@
+@import "a.css";
+@import "b.css";
+
+$fancybox-width: 400px !default;
+.fancybox {
+  width: $fancybox-width;
+}

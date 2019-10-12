@@ -1,0 +1,114 @@
+.one {
+  width: 100px;
+  height: 100px;
+}
+
+/*.two {
+ background: red;
+ border: 5px solid #000;
+}*/
+
+.two {
+  @extend .one;
+  background: red;
+  border: 5px solid #000;
+}
+
+
+a:hover {
+  text-decoration: none;
+}
+
+.linkhover {
+  @extend a:hover;
+}
+
+
+/*//*/
+.o-one {
+  width: 100px;
+  height: 100px;
+}
+
+.t-two {
+  /*@extend .o-one;
+  @extend .t-three;*/
+  @extend .o-one, .t-three;
+  background: red;
+  border: 5px solid #000;
+}
+
+.t-three {
+  padding: 10px;
+}
+
+
+/*//*/
+
+.o-o-one {
+  width: 100px;
+  height: 100px;
+}
+
+.t-t-two {
+  @extend .o-o-one;
+  //@extend .t-three;
+  //@extend .o-one,.t-three;
+  background: pink;
+  border: 10px solid deeppink;
+}
+
+.t-t-three {
+  @extend .t-t-two;
+  margin-top: 20px;
+  padding: 10px;
+}
+
+
+/*//*/
+
+.meng a {
+  font-weight: bold;
+}
+
+/*.long .link {
+  @extend a;
+}*/
+
+.long .link {
+  @extend .meng;
+}
+
+
+#mong a%long {
+  color: blue;
+  font-weight: bold;
+  font-size: 2em;
+}
+
+.notice {
+  @extend %long;
+  padding: 50px;
+}
+
+
+.first {
+  height: 200px;
+  background-color: #cccccc;
+}
+
+.second {
+  @extend .first;
+  width: 300px;
+}
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,22 @@
+/*内置函数*/
+.text {
+  content: type_of(100);
+}
+/*.text1 {
+  content: unquote('hello');
+}
+.text2 {
+  content: unquote("'hello");
+}
+.text3 {
+  content: unquote("i'm sass!");
+}
+.text4 {
+  content: unquote("'sass'");
+}
+.text5 {
+  content: unquote('"sass"');
+}
+.text6 {
+  content: unquote(sass);
+}*/

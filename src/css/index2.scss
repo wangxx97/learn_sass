@@ -47,7 +47,59 @@ ul.plain {
   @include link-colors(red,green,blue);
 }*/
 a {
-  @include link-colors($normal:red,$hover:green,$visited:blue);
+  @include link-colors(
+          $normal: red,
+          $hover: green,
+          $visited: blue);
+}
+
+
+@mixin link-color($normal: red,$hover: green,$visited: blue) {
+  color: $normal;
+  &:hover {
+    color: $hover;
+  }
+  &:visited {
+    color: $visited;
+  }
+}
+
+p {
+  @include link-color;
+}
+
+//p {
+//  @include link-color(#ccc); //将第一个值变成#ccc
+//}
+//
+//p {
+//  @include link-color($hover: #ccc); //将第二个值变成#ccc
+//}
+//
+//p {
+//  @include link-color($visited: #ccc); //将第三个值变成#ccc
+//}
+//
+
+
+//继承
+.error{
+  border: 1px red;
+  background-color: #fdd;
+}
+
+.error a {
+  color: red;
+  font-weight: 100;
+}
+
+h1.error {
+  font-size: 1.2rem ;
+}
+
+.seriousError {
+  @extend .error;
+  border-width: 3px;
 }
 
 

@@ -1,0 +1,63 @@
+.one, .two {
+  width: 100px;
+  height: 100px; }
+
+/*.two {
+ background: red;
+ border: 5px solid #000;
+}*/
+.two {
+  background: red;
+  border: 5px solid #000; }
+
+a:hover, .linkhover {
+  text-decoration: none; }
+
+/*//*/
+.o-one, .t-two {
+  width: 100px;
+  height: 100px; }
+
+.t-two {
+  /*@extend .o-one;
+  @extend .t-three;*/
+  background: red;
+  border: 5px solid #000; }
+
+.t-three, .t-two {
+  padding: 10px; }
+
+/*//*/
+.o-o-one, .t-t-two, .t-t-three {
+  width: 100px;
+  height: 100px; }
+
+.t-t-two, .t-t-three {
+  background: pink;
+  border: 10px solid deeppink; }
+
+.t-t-three {
+  margin-top: 20px;
+  padding: 10px; }
+
+/*//*/
+.meng a, .long .link a {
+  font-weight: bold; }
+
+/*.long .link {
+  @extend a;
+}*/
+#mong a.notice {
+  color: blue;
+  font-weight: bold;
+  font-size: 2em; }
+
+.notice {
+  padding: 50px; }
+
+.first, .second {
+  height: 200px;
+  background-color: #cccccc; }
+
+.second {
+  width: 300px; }
